@@ -7,8 +7,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <description>Cordova plugin for Firebase Remote Config</description>
     <license>MIT</license>
     <keywords>cordova</keywords>
-    <repo>https://github.com/chemerisuk/cordova-plugin-firebase-config</repo>
-    <issue>https://github.com/chemerisuk/cordova-plugin-firebase-config/issues</issue>
+    <repo>https://github.com/guardaco/cordova-plugin-firebase-config</repo>
+    <issue>https://github.com/guardaco/cordova-plugin-firebase-config/issues</issue>
 
     <js-module src="www/FirebaseConfig.js" name="FirebaseConfig">
         <merges target="cordova.plugins.firebase.config" />
@@ -17,7 +17,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <engines>
         <engine name="cordova" version=">=9.0.0"/>
         <engine name="cordova-android" version=">=8.0.0"/>
-        <engine name="cordova-ios" version=">=6.0.0"/>
+        <engine name="cordova-ios" version=">=5.0.0"/>
     </engines>
 
     <dependency id="cordova-plugin-firebase-analytics" version="~5.0.0"/>
