@@ -1,6 +1,7 @@
 package by.chemerisuk.cordova.firebase;
 
-import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 import android.content.Context;
 import android.util.Log;
@@ -28,9 +29,8 @@ public class FirebaseConfigPlugin extends ReflectiveCordovaPlugin {
 
         String filename = preferences.getString("FirebaseRemoteConfigDefaults", "");
         if (filename.isEmpty()) {
-            // always call setDefaults in order to avoid exception
-            // https://github.com/firebase/quickstart-android/issues/291
-            firebaseRemoteConfig.setDefaultsAsync(Collections.<String, Object>emptyMap());
+            Map<String, Object> remoteConfigDefaults = new HashMap<>();
+            firebaseRemoteConfig.setDefaultsAsync(remoteConfigDefaults);
         } else {
             Context ctx = cordova.getActivity().getApplicationContext();
             int resourceId = ctx.getResources().getIdentifier(filename, "xml", ctx.getPackageName());
